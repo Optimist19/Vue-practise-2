@@ -1,17 +1,158 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <ProvideNInject /> -->
+  <CustomCompEvent />
+  <AnotherSlotProps  url="https://reqres.in/api/users/2">
+    <template v-slot:details="slotProps">
+      <p v-if="slotProps.isLoading">
+        Loading...
+      </p>
+      <p v-else>
+        {{ slotProps.data }}
+      </p>
+    </template>
+  </AnotherSlotProps>
+  <ParentSlot />
+  <!-- <router-link to="/">Home</router-link>
+  <router-link to="/ifElse">If Else</router-link>
+  <router-link to="/bind">Bind</router-link>
+  <router-link to="/profile/whatever">Profile</router-link>
+  <router-view></router-view> -->
+  <IfTwo v-if="display" />
+  <button @click="display = !display">Show</button>
+  <teleport to="#name">
+    <TelePort />
+    <!-- This is commented===> <**p>teleported component to the footer id from the app id</p> -->
+  </teleport>
+  <div>
+    <component :is="component" />
+    <p>Dynamic Component</p>
+    <p>Testing Component tag</p>
+    <button @click="component = 'Test'">Test</button>
+    <button @click="component = 'Test2'">Test2</button>
+    <!-- This is commented===>  <button @click="component = 'Test2'">Test2</button> -->
+  </div>
+
+  <!-- This is commented===> <button></button>
+  This is commented===> <button></button> -->
+
+  <DynamicCom />
+  <ComPro />
+  <WatcherS />
+  <FormsData />
+  <RefRef />
+  <ChildToParentProps />
+  <ClassBinding />
+  <HtmlBind />
+  <AltAss />
+  <VShow />
+  <ForLoop />
+  <IfElse />
+  <IfStatement />
+  <FormBoxRadio />
+  <InputField />
+  <About />
+  <Bind />
+  <Home text="Getting to know better" />
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <!-- This is commented===> <HelloWorld msg="Welcome to Your Vue.js App" /> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//  commented out initially  import HelloWorld from "./components/HelloWorld.vue";
+import Home from "./components/Home.vue";
+import About from "./components/About.vue";
+import Bind from "./components/twoWayBind.vue";
+import InputField from "./components/dataInputField.vue";
+import FormBoxRadio from "./components/checkboxAndRadio.vue";
+import IfStatement from "./components/ifStatement.vue";
+import IfElse from "./components/ifElse.vue";
+import ForLoop from "./components/forLoop.vue";
+import VShow from "./components/VShow.vue";
+import AltAss from "./components/AltAss.vue";
+import HtmlBind from "./components/HtmlBind.vue";
+import ClassBinding from "./components/ClassBinding.vue";
+import ChildToParentProps from "./components/ClassBinding.vue";
+import RefRef from "./components/Ref.vue";
+import FormsData from "./components/Forms.vue";
+import WatcherS from "./components/Watchers.vue";
+import ComPro from "./components/ComputedProperty.vue";
+import DynamicCom from "./components/DynamicComp.vue";
+import Test from "./components/Test.vue";
+import Test2 from "./components/Test2.vue";
+import TelePort from "./components/Teleport.vue";
+import IfTwo from "./components/If.vue";
+import ParentSlot from "./components/ParentSlot.vue";
+import AnotherSlotProps from "./components/AnotherSlotProps.vue";
+import CustomCompEvent from "./components/CustomCompEvent.vue";
+// import ProvideNInject from "./components/ProvideNInject.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      component: "Test",
+      display: false,
+    };
+
+  },
+  provide:{
+    username: "Oluwasegunn",
+    lastName: "Bamidele"
+  },
+
+  // <p>This is when the parent also want to use data and then pass it to the parent</p>
+  // provide(){
+  //   return{
+  //     example: this.component
+  //   }
+  // },
   components: {
-    HelloWorld
-  }
-}
+    Home,
+    About,
+    Bind,
+    InputField,
+    FormBoxRadio,
+    IfStatement,
+    IfElse,
+    ForLoop,
+    VShow,
+    AltAss,
+    HtmlBind,
+    ClassBinding,
+    ChildToParentProps,
+    RefRef,
+    FormsData,
+    WatcherS,
+    ComPro,
+    DynamicCom,
+    Test,
+    Test2,
+    TelePort,
+    IfTwo,
+    ParentSlot,
+    AnotherSlotProps,
+    CustomCompEvent,
+    // ProvideNInject
+  },
+  // beforeCreate() {
+  //   console.log("beforeCreate");
+  //   alert("beforeCreate");
+  // },
+  // created() {
+  //   console.log("Create");
+  //   alert("Created");
+  // },
+
+  // beforeMount() {
+  //   console.log("beforeMount", this.$el);
+  //   alert("beforeMount");
+  // },
+
+  // mounted() {
+  //   console.log("Mounted", this.$el);
+  //   alert("Mounted");
+  // }
+};
 </script>
 
 <style>
