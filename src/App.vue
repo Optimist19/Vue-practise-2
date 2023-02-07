@@ -1,5 +1,8 @@
 <template>
-  <!-- <ProvideNInject /> -->
+  <ValidatingEmit />
+  <EmitEvent />
+  <WatcherDeep />
+  <WatcherImmediate />
   <CustomCompEvent />
   <AnotherSlotProps  url="https://reqres.in/api/users/2">
     <template v-slot:details="slotProps">
@@ -84,7 +87,10 @@ import IfTwo from "./components/If.vue";
 import ParentSlot from "./components/ParentSlot.vue";
 import AnotherSlotProps from "./components/AnotherSlotProps.vue";
 import CustomCompEvent from "./components/CustomCompEvent.vue";
-// import ProvideNInject from "./components/ProvideNInject.vue";
+import WatcherImmediate from "./components/WatcherImmediate.vue";
+import WatcherDeep from "./components/WatcherDeep.vue";
+import EmitEvent from "./components/EmitEvent.vue";
+import ValidatingEmit from "./components/ValidatingEmit.vue";
 
 export default {
   name: "App",
@@ -132,7 +138,10 @@ export default {
     ParentSlot,
     AnotherSlotProps,
     CustomCompEvent,
-    // ProvideNInject
+    WatcherImmediate,
+    WatcherDeep,
+    EmitEvent,
+    ValidatingEmit,
   },
   // beforeCreate() {
   //   console.log("beforeCreate");
