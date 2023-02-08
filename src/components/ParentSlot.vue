@@ -17,6 +17,9 @@
 
 </template>
 
+<!-- The child is childslot -->
+
+
 <script>
 import ChildSlot from "./ChildSlot.vue"
 

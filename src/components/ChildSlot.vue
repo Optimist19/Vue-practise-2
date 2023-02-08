@@ -5,6 +5,8 @@
   <slot name="body" :title="title">This is the Body Child</slot>
 </template>
 
+
+<!-- The parent is parentslot -->
 <script>
 export default {
 	name: "ChildSlot",

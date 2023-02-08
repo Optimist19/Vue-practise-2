@@ -10,3 +10,4 @@
 		name: "SlotSample"
 	}
 </script>
+<!-- parent is in home comp -->

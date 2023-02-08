@@ -1,6 +1,14 @@
 <template>
+  <CompVmodel />
+  <div id="app">
+    <FilterSearch/>
+  </div>
+  <AltColor />
+  <br />
   <ValidatingEmit />
+  <br />
   <EmitEvent />
+  <br />
   <WatcherDeep />
   <WatcherImmediate />
   <CustomCompEvent />
@@ -91,6 +99,9 @@ import WatcherImmediate from "./components/WatcherImmediate.vue";
 import WatcherDeep from "./components/WatcherDeep.vue";
 import EmitEvent from "./components/EmitEvent.vue";
 import ValidatingEmit from "./components/ValidatingEmit.vue";
+import AltColor from "./components/AltColor.vue";
+import FilterSearch from "./components/AltAssComposable.vue";
+import CompVmodel from "./components/CompVmodel.vue";
 
 export default {
   name: "App",
@@ -142,6 +153,9 @@ export default {
     WatcherDeep,
     EmitEvent,
     ValidatingEmit,
+    AltColor,
+    FilterSearch,
+    CompVmodel,
   },
   // beforeCreate() {
   //   console.log("beforeCreate");

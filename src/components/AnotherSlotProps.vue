@@ -33,6 +33,8 @@ export default {
 }
 </script>
 
+<!-- this is in app comp -->
+
 <style>
 
 </style>
