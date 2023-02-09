@@ -1,4 +1,5 @@
 <template>
+  <CompApiDataToRef />
   <ColorMixIn />
   <DynaComp />
   <CompVmodel />
@@ -106,6 +107,7 @@ import FilterSearch from "./components/AltAssComposable.vue";
 import CompVmodel from "./components/CompVmodel.vue";
 import DynaComp from "./components/DynaComp.vue";
 import ColorMixIn from "./components/Mixin.vue";
+import CompApiDataToRef from "./components/DataToRef.vue";
 
 export default {
   name: "App",
@@ -162,6 +164,7 @@ export default {
     CompVmodel,
     DynaComp,
     ColorMixIn,
+    CompApiDataToRef,
   },
   // beforeCreate() {
      // console.log("beforeCreate");
