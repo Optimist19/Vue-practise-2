@@ -1,4 +1,6 @@
 <template>
+  <ColorMixIn />
+  <DynaComp />
   <CompVmodel />
   <div id="app">
     <FilterSearch/>
@@ -102,6 +104,8 @@ import ValidatingEmit from "./components/ValidatingEmit.vue";
 import AltColor from "./components/AltColor.vue";
 import FilterSearch from "./components/AltAssComposable.vue";
 import CompVmodel from "./components/CompVmodel.vue";
+import DynaComp from "./components/DynaComp.vue";
+import ColorMixIn from "./components/Mixin.vue";
 
 export default {
   name: "App",
@@ -156,10 +160,12 @@ export default {
     AltColor,
     FilterSearch,
     CompVmodel,
+    DynaComp,
+    ColorMixIn,
   },
   // beforeCreate() {
-  //   console.log("beforeCreate");
-  //   alert("beforeCreate");
+     // console.log("beforeCreate");
+  //   alert("Tis is before created");
   // },
   // created() {
   //   console.log("Create");
@@ -168,7 +174,7 @@ export default {
 
   // beforeMount() {
   //   console.log("beforeMount", this.$el);
-  //   alert("beforeMount");
+  //   alert(`Parent beforeMount`);
   // },
 
   // mounted() {

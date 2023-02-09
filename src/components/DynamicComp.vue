@@ -1,8 +1,8 @@
 <template>
-  <!-- <JavaTech />
-  <NodeTech />
-  <PhpTech /> -->
-  <p>Dynamic Component</p>
+  <JavaTech v-if="tab === 'JavaTech'"/>
+  <NodeTech v-if="tab === 'NodeTech'"/>
+  <PhpTech v-if="tab === 'PhpTech'"/>
+  <h1>Dynamic Component</h1>
   <button @click="tab ='Node'">Node</button>
   <button @click="tab ='Java'">Java</button>
   <button @click="tab ='Php'">Php</button>

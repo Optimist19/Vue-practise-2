@@ -24,7 +24,10 @@ export default {
       },
     deep: true
     },
-  }
+  },
+  // beforeMount(){
+  //   alert(`beforeMount WatcherDeep`)
+  // }
 };
 </script>
 
