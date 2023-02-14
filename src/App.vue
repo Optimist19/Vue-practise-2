@@ -1,4 +1,7 @@
 <template>
+  <VmodelComApi />
+  <ReactiveReactivity />
+  <RefReactivity />
   <DataReactive />
   <CompApiDataToRef />
   <ColorMixIn />
@@ -110,6 +113,9 @@ import DynaComp from "./components/DynaComp.vue";
 import ColorMixIn from "./components/Mixin.vue";
 import CompApiDataToRef from "./components/DataToRef.vue";
 import DataReactive from "./components/DataToReactive.vue";
+import RefReactivity from "./components/RefReactivity.vue";
+import ReactiveReactivity from "./components/ReactiveReactivity.vue";
+import VmodelComApi from "./components/VmodelComApi.vue";
 
 export default {
   name: "App",
@@ -168,6 +174,9 @@ export default {
     ColorMixIn,
     CompApiDataToRef,
     DataReactive,
+    RefReactivity,
+    ReactiveReactivity,
+    VmodelComApi,
   },
   // beforeCreate() {
      // console.log("beforeCreate");
