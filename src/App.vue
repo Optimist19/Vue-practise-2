@@ -1,4 +1,5 @@
 <template>
+  <WatcherCompApiReactive />
   <WatcherCompApiRef />
   <ComputedCompApi />
   <VmodelComApi />
@@ -120,6 +121,7 @@ import ReactiveReactivity from "./components/ReactiveReactivity.vue";
 import VmodelComApi from "./components/VmodelComApi.vue";
 import ComputedCompApi from "./components/ComputedCompApi.vue";
 import WatcherCompApiRef from "./components/WatcherCompApiRef.vue";
+import WatcherCompApiReactive from "./components/WatcherCompApiReactive.vue";
 
 export default {
   name: "App",
@@ -183,6 +185,7 @@ export default {
     VmodelComApi,
     ComputedCompApi,
     WatcherCompApiRef,
+    WatcherCompApiReactive,
   },
   // beforeCreate() {
      // console.log("beforeCreate");

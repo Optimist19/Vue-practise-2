@@ -35,15 +35,21 @@ import {ref, watch} from "vue"
 			// })
 
 
-			// The one that is in array since we are watching more than one data source
-			// watch([count, text], (oldVals, newVals)=>{
-			// 	console.log(`old value is ${oldVals} and new val is ${newVals}`)
-			// })
+			// The one that is in array since we are watching more than one data source.
+			// To get the chnages you can use arry index, e.g
+			// console.log(`old value is ${oldVals[0]} and new val is ${newVals[0]}`)
+			// console.log(`old value is ${oldVals[1]}and new val is ${newVals[1]}`)
+
+			
+			watch([count, text], (oldVals, newVals)=>{
+				console.log(`old value is ${oldVals} and new val is ${newVals}`)
+				console.log(`old value is ${oldVals}and new val is ${newVals}`)
+			})
 
 			// The watch for immediate on page load, without the immediate you won't see oluwasegun in the console when the page loads
-			watch([count, text, textOne], (oldVals, newVals)=>{
-				console.log(`old value is ${oldVals} and new val is ${newVals}`)
-			})
+			// watch([count, text, textOne], (oldVals, newVals)=>{
+			// 	console.log(`old value is ${oldVals} and new val is ${newVals}`)
+			// })
 			// ,{
 			// immediate: true
 			// })
