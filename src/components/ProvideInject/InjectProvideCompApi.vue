@@ -1,4 +1,5 @@
 <template>
+	<RefComp />
   <h1>Inject And Provide Composition Api</h1>
   <ChildA />
   <p>{{ refExample }}</p>
@@ -7,11 +8,12 @@
 
 <script>
 import ChildA from "./ChildA";
+import RefComp from "./RefComp";
 import {ref, reactive, provide, toRefs} from "vue"
 
 export default {
   name: "InjectProvideCompApi",
-  components: { ChildA },
+  components: { ChildA, RefComp },
   setup(){
 	const refExample = ref(0);
 	const data = reactive({
