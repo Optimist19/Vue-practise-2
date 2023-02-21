@@ -1,4 +1,5 @@
 <template>
+  <InjectProvideCompApi />
   <WatcherCompApiReactive />
   <WatcherCompApiRef />
   <ComputedCompApi />
@@ -122,6 +123,7 @@ import VmodelComApi from "./components/VmodelComApi.vue";
 import ComputedCompApi from "./components/ComputedCompApi.vue";
 import WatcherCompApiRef from "./components/WatcherCompApiRef.vue";
 import WatcherCompApiReactive from "./components/WatcherCompApiReactive.vue";
+import InjectProvideCompApi from "./components/ProvideInject/InjectProvideCompApi.vue";
 
 export default {
   name: "App",
@@ -186,6 +188,7 @@ export default {
     ComputedCompApi,
     WatcherCompApiRef,
     WatcherCompApiReactive,
+    InjectProvideCompApi,
   },
   // beforeCreate() {
      // console.log("beforeCreate");
