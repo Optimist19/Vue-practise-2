@@ -1,20 +1,20 @@
 <template>
 	<h1>Props in composition Api</h1>
 	<ChildProps  :data="data" :show="show"/>
-	<PropsParent />
+	<ContextParent />
 	<ComposableCom />
 </template>
 
 <script>
 import {ref,} from "vue"
 import ChildProps from "./PropsCompApi.vue"
-import PropsParent from "./PropsParent.vue"
+import ContextParent from "./ContextPropsParent.vue"
 import ComposableCom from "./Composable.vue"
 	export default{
 		name: "ParentProps",
 		components:{
 			ChildProps,
-			PropsParent,
+			ContextParent,
 			ComposableCom
 		},
 

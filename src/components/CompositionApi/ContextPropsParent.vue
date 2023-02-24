@@ -1,14 +1,15 @@
 <template>
   <div>
 	<h4>Context(emit) composition Api</h4>
-	<p>Cars: {{ motorOne }} {{ motorTwo }} {{ motorThree }}</p>
+	<!-- <p>Cars: {{ motorOne }} {{ motorTwo }} {{ motorThree }}</p> -->
   </div>
-  <PropsChild @passdata = "getData" />
+  <ContextChild :motorOne="motorOne" :motorTwo="motorTwo" :motorThree="motorThree" @dataChange = "getData" />
+  <p>Data we passed to the parent from child using context</p>
 </template>
 
 <script>
 import {ref} from "vue"
-import PropsChild from "./PropsChild.vue"
+import ContextChild from "./ContextPropsChild.vue"
 export default {
 	name: "PropsParent",
 	setup(){
@@ -17,7 +18,7 @@ export default {
 		const motorThree = ref("Mustang")
 
 		function getData(event){
-			console.log(event)
+			console.log(event.value)
 		}
 
 		return{
@@ -28,7 +29,7 @@ export default {
 		}
 	},
 	components:{
-		PropsChild
+		ContextChild
 	}
 }
 </script>
