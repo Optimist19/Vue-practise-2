@@ -1,4 +1,5 @@
 <template>
+  <CounterO />
   <InjectProvideCompApi />
   <WatcherCompApiReactive />
   <WatcherCompApiRef />
@@ -114,7 +115,7 @@ import AltColor from "./components/AltColor.vue";
 import FilterSearch from "./components/AltAssComposable.vue";
 import CompVmodel from "./components/CompVmodel.vue";
 import DynaComp from "./components/DynaComp.vue";
-import ColorMixIn from "./components/Mixin.vue";
+import ColorMixIn from "./components/Mixins.vue";
 import CompApiDataToRef from "./components/DataToRef.vue";
 import DataReactive from "./components/DataToReactive.vue";
 import RefReactivity from "./components/RefReactivity.vue";
@@ -123,7 +124,8 @@ import VmodelComApi from "./components/VmodelComApi.vue";
 import ComputedCompApi from "./components/ComputedCompApi.vue";
 import WatcherCompApiRef from "./components/WatcherCompApiRef.vue";
 import WatcherCompApiReactive from "./components/WatcherCompApiReactive.vue";
-import InjectProvideCompApi from "./components/ProvideInject/InjectProvideCompApi.vue";
+import InjectProvideCompApi from "./components/CompositionApi/InjectProvideCompApi.vue";
+import CounterO from "./components/MixinTwo.vue";
 
 export default {
   name: "App",
@@ -189,6 +191,7 @@ export default {
     WatcherCompApiRef,
     WatcherCompApiReactive,
     InjectProvideCompApi,
+    CounterO,
   },
   // beforeCreate() {
      // console.log("beforeCreate");
